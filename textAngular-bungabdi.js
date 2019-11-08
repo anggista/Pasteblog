@@ -296,7 +296,7 @@ a=d.getSelectionElement().tagName&&"a"===d.getSelectionElement().tagName.toLower
 var a=this.$editor().displayElements.text,b=a[0].innerHTML||"",c=0;/* istanbul ignore if: will default to '' when undefined */
 //Set current scope
 //Set editor scope
-return""!==b.replace(/\s*<[^>]*?>\s*/g,"")&&""!==b.trim()&&(c=b.replace(/<\/?(b|i|em|strong|span|u|strikethrough|a|img|small|sub|sup|label)( [^>*?])?>/gi,"").replace(/(<[^>]*?>\s*<[^>]*?>)/gi," ").replace(/(<[^>]*?>)/gi,"").replace(/\s+/gi," ").match(/\S+/g).length),this.wordcount=c,this.$editor().wordcount=c,!1}}),a("charcount",{display:'<div id="toolbarCC" style="display:block; min-width:120px;">Characters: <span ng-bind="charcount" id="nilaikarakter" value="" onclick="nilaikarakter()" ></span></div>',disabled:!0,charcount:0,activeState:function(){// this fires on keyup
+return""!==b.replace(/\s*<[^>]*?>\s*/g,"")&&""!==b.trim()&&(c=b.replace(/<\/?(b|i|em|strong|span|u|strikethrough|a|img|small|sub|sup|label)( [^>*?])?>/gi,"").replace(/(<[^>]*?>\s*<[^>]*?>)/gi," ").replace(/(<[^>]*?>)/gi,"").replace(/\s+/gi," ").match(/\S+/g).length),this.wordcount=c,this.$editor().wordcount=c,!1}}),a("charcount",{display:'<div id="toolbarCC" style="display:block; min-width:120px;">Characters: <span ng-bind="charcount" id="nilaikarakter" value="0" onclick="nilaikarakter()" ></span></div>',disabled:!0,charcount:0,activeState:function(){// this fires on keyup
 var a=this.$editor().displayElements.text,b=a[0].innerText||a[0].textContent,c=b.replace(/(\r\n|\n|\r)/gm,"").replace(/^\s+/g," ").replace(/\s+$/g," ").length;
 //Set current scope
 //Set editor scope
